@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>messApp</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="channels">
+        <div id="channels-title-container">
+          <h3>Channels</h3>
+          <button id="new-channel-button" onclick="openNewChannelModal()">
+            +
+          </button>
+        </div>
+        <ul id="channels-list"></ul>
+      </div>
+
+      <div id="chat">
+        <div id="chat-title">
+          <h3 id="chat-title-text"></h3>
+        </div>
+        <div id="chat-messages"></div>
+        <div id="chat-input-group">
+          <button id="new-message-button">+</button>
+          <input id="message-input" />
+        </div>
+      </div>
+
+      <div id="new-channel-modal">
+        <div id="new-channel-modal-content">
+          <h3 id="new-channel-model-title">Enter a name for the new channel</h3>
+          <div>
+            <input id="new-channel-input" placeholder="Name for new channel" />
+            <button
+              id="new-channel-button-cancel"
+              onclick="closeNewChannelModal()"
+            >
+              Cancel
+            </button>
+            <button id="new-channel-button-create" onclick="createNewChannel()">
+              Create
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/selectors.js"></script>
+  </body>
+</html>
