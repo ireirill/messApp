@@ -144,5 +144,6 @@ input {
 .message-user-name {
   font-size: larger;
   font-weight: bold;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 30px;
 }
