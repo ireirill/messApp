@@ -115,3 +115,26 @@ input {
   color: #866861;
   cursor: pointer;
 }
+
+.message-box {
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: azure;
+  margin: 5px;
+  padding: 5px;
+}
+
+.message-box-title {
+  border-bottom: 1px solid black;
+  padding: 8px 0;
+}
+
+.message-box-text {
+  padding: 8px 0;
+}
+
+.message-user-name {
+  font-size: larger;
+  font-weight: bold;
+  padding-right: 15px;
+}
