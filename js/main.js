@@ -69,7 +69,7 @@ addChanneltoList = (channel) => {
 
 selectChannel = (channel) => {
   selectedChannel = channel;
-  document.getElementById("new-channel-input").value = "";
+  document.getElementById("chat-search-input").value = "";
   setChannelName(selectedChannel.name);
   showMessages(selectedChannel.messages);
   document.getElementById("message-input").focus();
@@ -179,5 +179,25 @@ toggleNewMessageDisabled = (disabled) => {
   } else {
     messageButton.removeAttribute("disabled");
     messageInput.removeAttribute("disabled");
+  }
+};
+
+searchCriteriaChanged = (event) => {
+  const searchCriteria = event.target.value;
+  if (searchCriteria) {
+    setChannelName("Resultado de la búsqueda");
+    toggleNewMessageDisabled(true);
+    let allMessages = [];
+    for (let i = 0; i < channels.length; i++) {
+      allMessages = allMessages.concat(channels[i].messages);
+    }
+    const result = allMessages.filter((message) =>
+      message.text.includes(searchCriteria)
+    );
+    showMessages(result);
+  } else {
+    toggleNewMessageDisabled(false);
+    setChannelName(selectedChannel.name);
+    showMessages(selectedChannel.messages);
   }
 };
