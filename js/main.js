@@ -185,7 +185,7 @@ toggleNewMessageDisabled = (disabled) => {
 searchCriteriaChanged = (event) => {
   const searchCriteria = event.target.value;
   if (searchCriteria) {
-    setChannelName("Resultado de la búsqueda");
+    setChannelName("Search Result");
     toggleNewMessageDisabled(true);
     let allMessages = [];
     for (let i = 0; i < channels.length; i++) {
