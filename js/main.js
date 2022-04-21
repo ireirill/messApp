@@ -94,6 +94,19 @@ addMessage = () => {
   }
 };
 
+formatDate = (date) =>
+  date.getDate() +
+  "/" +
+  (date.getMonth() + 1) +
+  "/" +
+  date.getFullYear() +
+  " " +
+  date.getHours() +
+  ":" +
+  date.getMinutes().toString().padStart(2, "0") +
+  ":" +
+  date.getSeconds().toString().padStart(2, "0");
+
 newMessageInputKey = (event) => {
   if (event.key === "Enter") {
     addMessage();
@@ -142,6 +155,14 @@ showMessageInChat = (message) => {
     message.author,
     "message-user-name"
   );
+
+  createElement(
+    "span",
+    messageTitleContainer,
+    formatDate(message.dateTime),
+    "message-date-time"
+  );
+
   createElement("span", messageContainer, message.text);
 
   const chatMessages = getChatMessages();
