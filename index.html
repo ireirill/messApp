@@ -26,8 +26,8 @@
         </div>
         <div id="chat-messages"></div>
         <div id="chat-input-group">
-          <button id="new-message-button">+</button>
-          <input id="message-input" />
+          <button id="new-message-button" onclick="addMessage()">+</button>
+          <input id="message-input" onkeypress="newMessageInputKey(event)" />
         </div>
       </div>
 
@@ -35,7 +35,11 @@
         <div id="new-channel-modal-content">
           <h3 id="new-channel-model-title">Enter a name for the new channel</h3>
           <div>
-            <input id="new-channel-input" placeholder="Name for new channel" />
+            <input
+              id="new-channel-input"
+              placeholder="Name for new channel"
+              onkeypress="newChannelInputKey(event)"
+            />
             <button
               id="new-channel-button-cancel"
               onclick="closeNewChannelModal()"
@@ -52,5 +56,10 @@
 
     <script src="/js/main.js"></script>
     <script src="/js/selectors.js"></script>
+    <script>
+      window.onload = () => {
+        init();
+      };
+    </script>
   </body>
 </html>
