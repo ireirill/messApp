@@ -41,6 +41,11 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  background-color: #717171;
+  cursor: not-allowed;
+}
+
 input {
   background-color: #ffffff;
   border-color: #618685;
