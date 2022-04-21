@@ -146,6 +146,7 @@ showMessageInChat = (message) => {
 
   const chatMessages = getChatMessages();
   chatMessages.appendChild(messageBox);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 };
 
 toggleNewMessageDisabled = (disabled) => {
