@@ -51,21 +51,12 @@ input {
 }
 
 #chat {
+  background-color: #f0eae3;
+  flex: 4;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  flex: 4;
   justify-content: space-between;
-  padding: 10px;
-  background-color: #d5f4e6;
-}
-
-#chat-title {
-  display: flex;
-  flex-direction: row;
-}
-
-#chat-title-text {
-  padding: 30px;
 }
 
 #chat-input-group {
@@ -77,6 +68,23 @@ input {
 #chat-input-group > input {
   flex: 1;
   margin-left: 10px;
+}
+
+#chat-title {
+  font-size: large;
+  font-weight: bold;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#chat-title-text {
+  margin: 10px;
+}
+
+#chat-messages {
+  overflow: auto;
+  flex: 1;
 }
 
 #new-channel-modal {
@@ -119,7 +127,7 @@ input {
 .message-box {
   border: 1px solid black;
   border-radius: 8px;
-  background-color: azure;
+  background-color: rgba(230, 236, 236, 0.753);
   margin: 5px;
   padding: 5px;
 }
